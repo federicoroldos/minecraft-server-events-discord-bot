@@ -1,11 +1,11 @@
-# MinecraftServerNotifications
-A simple connection between Discord and your own Minecraft server that sends notifications every time a player logs in.
+# minecraft-server-events-discord-bot
+A simple connection between Discord and your own Minecraft server that posts a message every time a player joins, leaves or dies.
 
 ## What this does
-Runs a Discord bot on your Windows PC and watches your Spigot `latest.log`. When it sees lines like:
-- `[Server thread/INFO]: [+] playerName`
-- `[Server thread/INFO]: [-] playerName`
-- `[Server thread/INFO]: playerName was slain by Zombie`
+Runs a Discord bot on your Windows PC and watches your server's `latest.log` (Spigot/Paper or Vanilla). When it sees lines like:
+- `[Server thread/INFO]: [+] playerName` or `playerName joined the game`
+- `[Server thread/INFO]: [-] playerName` or `playerName left the game`
+- `[Server thread/INFO]: playerName was slain by Zombie` (any vanilla death message)
 
 it posts a message to a Discord channel.
 
@@ -29,7 +29,7 @@ it posts a message to a Discord channel.
    - Put it in `config.json` as `channel_id`
 
 ## Local setup (Windows)
-From the repo folder `MinecraftServerNotifications`:
+From the repo folder:
 1. Run:
    - `.\run.ps1`
 
